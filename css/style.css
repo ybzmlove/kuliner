@@ -313,7 +313,29 @@ a{ text-decoration: none;}
 #special #main_cont .arrow_space a{display: inline-block; height: 19px;}
 #special #main_cont .arrow_space a img{display: block;}
 
-/*******************************************************************/
+/*************************************************************************************/
+
+/* 
+#midEdu2{}
+
+#midEdu2 .frame{
+    width: 900px; 
+    margin: 0 auto; 
+    padding: 40px 0; 
+    background-color: #aff; 
+    font-size: 0;
+}
+
+#midEdu2 .frame .box{
+    display: inline-block;
+    width: calc(100% / 3 - 20px);
+    height: 280px;
+    margin: 0 10px;
+    background-color: #faa;
+}
+*/
+
+/*************************************************************************************/
 #dishes{
     padding-top: 20px;
     background-image: url(../img/3.png);
@@ -356,7 +378,7 @@ a{ text-decoration: none;}
 #dishes .wrap .cont_part .cate_box .cate_detail{
     width: 100%; 
     position: relative;
-   /* background-color: #ff0;*/
+    /* background-color: #ff0; */
     font-size: 0;
 }
 #dishes .wrap .cont_part .cate_box .cate_detail > div{
@@ -390,11 +412,15 @@ a{ text-decoration: none;}
     background-color: #cfcfcf;
     transform: translateX(-50%);
 }
+
+.arrow_space{ text-align: center; padding: 20px 0 40px;}
+
+/* 
 .cate_detail{
     width: 100%; 
     padding: 60px 0;
     position: relative;
-    /*background-color: #ff0;*/
+    background-color: #ff0;
 }
 .cate_detail .centerLine{
     position: absolute;
@@ -405,7 +431,260 @@ a{ text-decoration: none;}
     background-color: #000;
     transform: translateX(-50%);
 }
+*/
 
+/*******************************************************************************/
+
+/*#service part*/
+#service{background-color: #ededed;}
+#service .wrap{
+    width: 1160px; 
+    margin: 0 auto;
+    padding: 0 10px; 
+    text-align: center;
+    /* background: #aff; */
+}
+#service .wrap .title{padding-top: 60px; padding-bottom: 80px;}
+#service .wrap .title h2{
+    font-size:54px; 
+    line-height:72px; 
+    color:#555; 
+    padding-bottom: 20px;
+}
+#service .wrap .title p{
+    font-size: 16px; 
+    color:#555;
+    text-transform: uppercase;
+}
+#service .wrap .content{
+    /* background: #ffa; */
+    font-size: 0;
+}
+#service .wrap .content > div{
+    display: inline-block;
+    vertical-align: top;
+    width: 360px; height: 360px;
+    border-radius:8px;
+    background-color: #fee;
+    margin: 0 10px;
+    padding: 40px;
+    font-size: 16px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+#service .wrap .content > div:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #f99;
+}
+
+#service .wrap .content > div .img_part{
+    padding-top: 40px;
+}
+#service .wrap .content > div .txt_part{
+
+}
+#service .wrap .content > div .txt_part h3{    
+    padding: 20px 0; 
+    font-size: 24px; 
+    color:#555;
+    text-transform: uppercase;
+}
+#service .wrap .content > div .txt_part p{    
+    font-size: 16px; 
+    font-weight: bold;
+    color:#555;
+}
+#service .wrap .arrow_space{padding: 60px 0;}
+
+/************************************************************/
+
+#offer{ 
+    width: 100%; height: 460px;
+    background-image: url(../img/6.jpg); background-attachment: fixed;
+    background-size: cover; background-position: 50% 50%;
+}
+#offer .dark{ 
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*display: table;*/
+    position: relative;
+}
+#offer .dark .cont{ 
+    /*display: table-cell; text-align: center; vertical-align: middle;*/ 
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center; color: #fff;
+}
+#offer .dark .cont h2{ font-size: 52px; line-height: 72px; padding: 20px 0;}
+#offer .dark .cont p{ font-size: 16px; padding-bottom: 40px;}
+
+#offer .dark .cont .sendBox{ 
+    width: 740px; height: 60px;
+    border-radius: 8px; border: 2px solid #ff6600;
+    background-color: #fff;
+    font-size: 0;
+}
+#offer .dark .cont .sendBox input{
+    vertical-align: top;
+   width: calc(100% - 60px); height: 100%; 
+   padding: 0 10px; font-size: 18px;
+   border: none; background-color: transparent;
+   outline-color: #f60;
+
+}
+#offer .dark .cont .sendBox button{
+    vertical-align: top;
+    width: 60px; height: 100%;
+    font-size: 25px; color: #ff6600;
+    border: none; background-color: transparent;
+    outline-color: #f60;
+    cursor: pointer; 
+}
+
+/*********************************************************************/
+
+#register{
+    width: 100%; height: auto;
+    background-color: #ededed;
+}
+#register .wrap{
+    width: 1160px; height: auto;
+    padding: 0 10px; margin: 0 auto;
+    font-size: 0;
+}
+#register .wrap .left{
+    display: inline-block; vertical-align: top;
+    width: 50%; height: 400px; 
+    padding: 20px;
+    /*background: #fcc;*/
+}
+#register .wrap .left #map_g{ height: 100%;  /*360px*/}
+#register .wrap .right{
+    display: inline-block; vertical-align: top;
+    width: 50%; height: 400px; 
+    padding: 20px;
+    /*background: #ccf;*/
+}
+#register .wrap .right .title{
+    padding: 20px 0; 
+    text-align: center;
+}
+#register .wrap .right .title h2{
+    font-size: 54px; line-height: 72px; color:#555;
+}
+#register .wrap .right .cont{}
+#register .wrap .right .cont .input_line{ padding-bottom: 8px;}
+#register .wrap .right .cont .input_line input{
+    width: 100%; height: 35px; 
+    padding: 0 20px; 
+    background-color: transparent; outline-color: #f60;
+    border: none; border-bottom: 1px solid #999;
+}
+#register .wrap .right .cont input[type="checkbox"]{ height: 12px;} 
+#register .wrap .right .cont span{ font-size: 16px; color:#555;}
+#register .wrap .right .cont .btn{ text-align: right;}
+#register .wrap .right .cont .btn input{
+    width: 240px; height: 41px; 
+    font-size: 18px; color:#fff;
+    background-color: #f60;
+    border:none; border-radius: 8px;
+    cursor: pointer;
+}
+#register .wrap .right .cont .btn input:hover{ background-color: #d40;}
+
+/***********************************************************************/
+
+#footer{ 
+    width: 100%; height: 220px; 
+    background-color: #000;
+    position: relative;}
+#footer .wrap{ 
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1160px; height: 100%; 
+    padding: 0 10px; text-align: center;
+}
+#footer .wrap .sns{ 
+}
+#footer .wrap .sns ul{ 
+    position: relative;
+    padding: 20px; /*background-color: #aaf;*/
+    font-size: 0; }
+#footer .wrap .sns ul li{    
+    display: inline-block; 
+    margin: 0 10px;
+    width: 40px; height: 40px; 
+    border: 1px solid #fff; border-radius: 20px;
+    /*background-color: #ffa;*/
+}
+#footer .wrap .sns ul li a{ 
+    position: absolute; top: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 16px; color: #fff;
+}
+#footer .wrap .sns ul li:hover a{ 
+    color: #ff6600;
+}
+#footer .wrap .f_logo{ 
+    padding: 10px 0; /*background-color: #aff;*/
+}
+#footer .wrap .f_logo img{ }
+#footer .wrap p{ 
+    font-size: 14px; color: #fff; padding: 14px 0;
+    /*background-color: #afa;*/
+}
+/*   or   */
+/* 
+#footer{
+    width: 100%; height: auto;
+    background-color: #000;
+    text-align: center;
+}
+#footer .wrap{
+    width: 1160px; height: auto;
+    margin: 0 auto; padding: 20px 10px;
+}
+#footer .wrap .sns{}
+#footer .wrap .sns ul{ font-size: 0;}
+#footer .wrap .sns ul li{
+    display: inline-block;
+    margin: 10px;
+}
+#footer .wrap .sns ul li a{
+    display: block;
+    width: 40px; height: 40px;
+    border:1px solid #fff; border-radius:50%;
+    color:#fff; font-size: 16px; line-height: 38px;    
+}
+#footer .wrap .sns ul li:hover a{
+    color:#f60;
+    border: 1px solid #f60;
+}
+#footer .wrap .f_logo{
+    padding: 10px 0;
+    font-size: 0;
+}
+#footer .wrap .f_logo img{}
+#footer .wrap p{     
+    padding: 14px 0; 
+    color:#fff; font-size: 14px;
+}
+*/
+
+/*********************************************************************/
+/* #topBtn (상단으로 이동) */
+#topBtn{ 
+    position: fixed; bottom: 20px; right: 20px;
+    z-index: 10;
+}
+#topBtn a{ 
+    display: block;
+    width: 36px; height: 36px; text-align: center;
+    line-height: 36px; color: #fff; background-color: #f60;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/*********************************************************************/
 
 
 

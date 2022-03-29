@@ -17,6 +17,18 @@
     <script>
         new WOW().init();
     </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMOwJdqgkxI6MQb4E95pSSBF1TABF5pZA&callback=initMap"></script>
+    <script>
+        function initMap() { 
+            var uluru = {lat: 37.463, lng: 126.894}; //lat(latitude, 위도), lng(longitude, 경도)
+            var map = new google.maps.Map(document.getElementById('map'), { 
+                zoom: 17, 
+                center: uluru 
+            }); 
+            var marker = new google.maps.Marker({ position: uluru, map: map }); 
+        }
+    </script>
     
 </head>
 <body>
@@ -52,10 +64,10 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li><a href="">OUR STORY</a></li>
-                            <li><a href="">SPECIAL DISHES</a></li>
-                            <li><a href="">DISHES</a></li>
-                            <li><a href="">SERVICE</a></li>
+                            <li class="story"><a href="">OUR STORY</a></li>
+                            <li class="special"><a href="l">SPECIAL DISHES</a></li>
+                            <li class="dishes"><a href="">DISHES</a></li>
+                            <li class="service"><a href="">SERVICE</a></li>
                         </ul>
                         <div class="reserve_btn">
                             <a href="#">RESERVATION</a>
@@ -89,7 +101,7 @@
                 </div>
                 <div class="txt_part wow fadeInRight">
                     <p>In a country where understatement and simplicity reign, the unpretentious smorrebrod is a national dish. There are countless variations, from minimal to lavish, but all reflect straightforward Scandinavian sensibilities: simple, honest, local ingredients attractively presented with little waste</p>
-                    <a href="#"><img src="./img/separator-img.png" alt=""></a>
+                    <a class="special" href="#"><img src="./img/separator-img.png" alt=""></a>
                 </div>
             </div>
 
@@ -166,11 +178,35 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow_space"></div>
-
-
+            <div class="arrow_space">
+                <a class="dishes" href="#"><img src="./img/separator-img.png" alt=""></a>
+            </div>
         </div>
     </div>
+
+    <!-- 
+        <div id="midEdu2">
+        <h3>wowjs의 작동 연기 시간 제어</h3>
+        <div class="frame">
+            <div class="box wow fadeInUp" data-wow-delay="1s"></div>
+            <div class="box wow fadeInUp" data-wow-delay="2s"></div>
+            <div class="box wow fadeInUp" data-wow-delay="3s"></div>
+        </div>
+        <div class="text_fx">
+            <h1>
+                <span class="wow fadeInRight" data-wow-delay="0s">O</span>
+                <span class="wow fadeInRight" data-wow-delay="0.5s">u</span>
+                <span class="wow fadeInRight" data-wow-delay="1s">r</span>
+                <span class="wow fadeInRight" data-wow-delay="1.5s">&nbsp;</span>
+                <span class="wow fadeInRight" data-wow-delay="2s">S</span>
+                <span class="wow fadeInRight" data-wow-delay="2.5s">t</span>
+                <span class="wow fadeInRight" data-wow-delay="3s">o</span>
+                <span class="wow fadeInRight" data-wow-delay="3.5s">r</span>
+                <span class="wow fadeInRight" data-wow-delay="4s">y</span>
+            </h1>
+        </div>
+    </div>
+     -->
 
     <div id="dishes">
         <div class="wrap"><!--w1160 + 가운데 정렬 + 내부 여백(padding:0 10px)-->
@@ -295,16 +331,205 @@
                 </div>
             </div><!--.cont_part-->
             <div class="arrow_space">
-                <a href="#"><img src="./img/separator-img.png" alt=""></a>
+                <a class="service" href="#"><img src="./img/separator-img.png" alt=""></a>
             </div>
-
         </div>
     </div>
 
-    <hr>
+    <div id="service">
+        <div class="wrap">
+            <div class="title">
+                <h2 class="font_pacifico wow fadeInDown">We Provide the Following</h2>
+                <p class="wow fadeInUp">servie</p>
+            </div>
+
+            <div class="content">
+                <div class="wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="img_part">
+                        <img src="./img/sushi.png" alt="catering image">
+                    </div>
+                    <div class="txt_part">
+                        <h3>catering</h3>
+                        <p>Food is about celebration. It is comfort and memories, good times and sweet thoughts. Food is creativity and love.</p>
+                    </div>
+                </div>
+                <div class="wow fadeInUp"  data-wow-delay="1s">
+                    <div class="img_part">
+                        <img src="./img/pizza.png" alt="catering image">
+                    </div>
+                    <div class="txt_part">
+                        <h3>pizza holic</h3>
+                        <p>Bed of red and green oak lettuce, Kalamata olives, pepperoncinis, red onions, cherry tomatoes, cucumbers, feta cheese, oregano.</p>
+                    </div>
+                </div>
+                <div class="wow fadeInUp"  data-wow-delay="1.5s">
+                    <div class="img_part">
+                        <img src="./img/truck.png" alt="catering image">
+                    </div>
+                    <div class="txt_part">
+                        <h3>24hour delivery</h3>
+                        <p>Our standard delivery fee depends on your distance from the chosen restaurant(s). Minimum orders are required for most delivery orders.</p>
+                    </div>
+                </div>
+            </div><!--/.content-->
+            <div class="arrow_space">
+                <a class="offer" href=""><img src="./img/separator-img.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="offer">
+        <div class="dark">
+            <div class="cont">
+                <h2 class="font_pacifico">subscribe for best offer</h2>
+                <p>WAITTING FOR NEW DISHES</p>
+                <div class="sendBox">
+                    <input type="mail" placeholder="subscribe@gmail.com">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="register">
+        <div class="wrap">
+            <div class="left">
+                <div id="map_g"></div>
+            </div>
+            <div class="right">
+                <div class="title">
+                    <h2 class="font_pacifico">Register</h2>
+                </div>
+                <div class="cont">
+                    <form action="서버 프로그램 문서" method="post"><!--사용자의 입력한 모든 내용을 Data Base라는 곳에 전달하기 위한 도구-->
+                        <div class="input_line">
+                            <input type="text" name="userid" id="user_id" placeholder="ID">
+                        </div>
+                        <div class="input_line">
+                            <input type="password" name="userpw" id="user_pw" placeholder="PASSWORD">
+                        </div>
+                        <div class="input_line">
+                            <input type="password" name="userpw_confirm" id="user_pw_confirm" placeholder="PASSWORD CONFIRM">
+                        </div>
+                        <div class="input_line">
+                            <input type="email" name="useremail" id="user_email" placeholder="E-Mail">
+                        </div>
+                        <input type="checkbox" name="agree_mail">&nbsp;<span>Send our info your email</span>
+                        <div class="btn">
+                            <input type="submit" value="SUBMIT">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMOwJdqgkxI6MQb4E95pSSBF1TABF5pZA&callback=initMap"></script>
+    <script>
+        function initMap() { 
+            var uluru = {lat: 37.49063443137443, lng: 127.02815225132322}; //lat(latitude, 위도), lng(longitude, 경도)
+            var map = new google.maps.Map(document.getElementById('map_g'), { 
+                zoom: 17, 
+                center: uluru 
+            }); 
+            var marker = new google.maps.Marker({ position: uluru, map: map }); 
+        }
+    </script>
+
+    <div id="footer">
+        <div class="wrap">
+            <div class="sns">
+                <ul>
+                    <li><a href="#" target="_blank" title="페이스북 바로가기"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank" title="트위터 바로가기"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank" title="핀터레스트 바로가기"><i class="fab fa-pinterest-square"></i></a></li>
+                    <li><a href="#" target="_blank" title="유투브 바로가기"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="f_logo"><img src="./img/logo-footer.png" alt="하단 로고"></div>
+            <p>&copy; 2022 KULINER. All rights reserved</p>
+        </div>               
+    </div>
+
+    <div id="topBtn">
+        <a href="#header"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+<!---------------------------------------------------------------------------
+
+     <div id="midEdu3">
+        <h3>구글맵 연동하기 : 구버전 API(Application Programing Interface : 웹플랫폼에 연동하는 정보를 가져오는 작업) 사용</h3>
+        <div id="map_g"></div>
+        <h3>카카오맵 : 실제 웹 공간에 올릴 경우 반드시 플랫폼에 설정된 URL 주소를 변경 </h3>
+        <div id="map" style="width:500px;height:400px;"></div>
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMOwJdqgkxI6MQb4E95pSSBF1TABF5pZA&callback=initMap"></script>
+    <script>
+        function initMap() { 
+            var uluru = {lat: 37.49886544595855, lng: 127.02668237777702}; //lat(latitude, 위도), lng(longitude, 경도)
+            var map = new google.maps.Map(document.getElementById('map_g'), { 
+                zoom: 17, 
+                center: uluru 
+            }); 
+            var marker = new google.maps.Marker({ position: uluru, map: map }); 
+        }
+    </script>
+     
+
+    <!---자바스크립트는 문서의 모든 로딩 종료된 상태에서 기능이 부여되도록 문서의 하단에 위치시킨다. -->
+    <!-- 카카오맵 자바스크립트
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=47979a049a45f2bb350d931851b6669e"></script>
+   <script>
+      var container = document.getElementById('map_k');
+      var options = {
+         center: new kakao.maps.LatLng(33.450701, 126.570667),
+         level: 3
+      };
+
+      var map = new kakao.maps.Map(container, options);
+   </script>
+
+--------------------------------------------------------------------> 
 
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    //f(x) = x + 1 = ?
+    $(document).ready(function(){ 
+        $(".story").click(function(){
+            $("html, body").animate({ scrollTop:$("#story").offset().top}, 1000);
+            return false; //href에 의해 브라우저의 새로고침을 막는 역할을 한다.
+            //scrollTop : 스크롤바의 Y 위치에 대한 선언
+            //$("선택자(요소명, .클래스명, #아이디명, ... , CSS에서 선언 가능한 모든 선택자)") : 주어
+            //offset().top : 브라우저의 상단으로부터 떨어진 거리(offset) 중 해당 영역의 상단(top)을 지목한다.
+        });
+        $(".special").click(function(){ 
+            $("html, body").animate({ scrollTop:$("#special").offset().top}, 1000);
+            return false;
+        });
+        $(".dishes").click(function(){ 
+            $("html, body").animate({ scrollTop:$("#dishes").offset().top}, 1000);
+            return false;
+        });
+        $(".service").click(function(){ 
+            $("html, body").animate({ scrollTop:$("#service").offset().top}, 1000);
+            return false;
+        });
+        $(".offer").click(function(){ 
+            $("html, body").animate({ scrollTop:$("#offer").offset().top}, 1000);
+            return false;
+        });
+        //상단으로 이동시키는 버튼
+        $("#topBtn").click(function(){
+            $("html, body").animate({ scrollTop: 0}, 1000);
+            return false;
+        });
+        //사용자가 어느 곳을 클릭하면
+        //전체 페이지 ($("html, body")) 를 이동시켜라(animate) / 스크롤바의 상단(scrollTop)을 해당하는 목적지 ($("타겟지역").offset().top)까지 옮겨라.
+        //reture false; => 거짓을 돌려준다.(작동되지 않도록 구성된다.)
+    });
+</script>
+    
 </body>
 </html>
